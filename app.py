@@ -1,11 +1,28 @@
+import streamlit as st
+from st_pages import add_page_title, get_nav_from_toml
 
-from src.Shared.Application.services.GeoPreprocessor import  GeoApplicationService
+st.set_page_config(layout="wide")
+
+st.markdown("""
+    <style>
+        .block-container {
+            padding-top: 1rem;  /* Adjust this value as needed */
+            margin-top: 1rem;   /* Adjust this value as needed */
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+nav = get_nav_from_toml("pages_sections.toml")
+
+pg = st.navigation(nav)
+
+add_page_title(pg)
 
 
-obj =   GeoApplicationService()
-
-
-# Load Geographical Data
-print(obj.get_geo_processed_data().head())
-print(obj.get_stations_count())
-
+# Render content based on the selected page
+if pg.title == "HOME":
+    from _pages.stations import display_stations
+    display_stations()
+elif pg.title == "Search":
+    from _pages.search import display_search
+    display_search()

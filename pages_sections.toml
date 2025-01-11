@@ -1,0 +1,14 @@
+[[pages]]
+path = "app.py"
+name = "HOME"
+icon = "🏠"
+
+[[pages]]
+path = "_pages/search.py"
+name = "Search"
+icon = "🔍"
+
+[[pages]]
+path = "_pages/stations.py"
+name = "Charging station"
+icon = "📖"
