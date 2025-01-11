@@ -7,4 +7,5 @@ obj =   GeoApplicationService()
 
 # Load Geographical Data
 print(obj.get_geo_processed_data().head())
+print(obj.get_stations_count())
 

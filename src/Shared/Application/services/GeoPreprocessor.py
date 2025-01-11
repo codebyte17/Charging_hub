@@ -14,7 +14,7 @@ class GeoApplicationService:
 
     def get_geo_processed_data(self):
         # Geospatial data processing
-        df_stations = self.geo_processor.preprocess_lstat_data(self.csv_data.geo_data_loader().df, self.csv_data.stations_data_loader().df, config.DICT)
+        df_stations = self.geo_processor.preprocess_lstat_data(self.csv_data.stations_data_loader().df,self.csv_data.geo_data_loader().df)
         return df_stations
 
     def get_stations_count(self):
