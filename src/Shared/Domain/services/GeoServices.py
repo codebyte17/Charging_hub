@@ -22,7 +22,7 @@ class GeoDataProcessor:
 
         dframe = dfr.copy()
         df_geo = dfg.copy()
-        print(dframe.head())
+
         dframe2 = dframe.loc[:,
                   ['Postleitzahl', 'Bundesland', 'Breitengrad', 'Längengrad', 'Nennleistung Ladeeinrichtung [kW]']]
         dframe2.rename(columns={"Nennleistung Ladeeinrichtung [kW]": "KW", "Postleitzahl": "PLZ"}, inplace=True)

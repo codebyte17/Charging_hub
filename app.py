@@ -20,7 +20,7 @@ add_page_title(pg)
 
 
 # Render content based on the selected page
-if pg.title == "HOME":
+if pg.title == "Charging-Hub":
     from _pages.stations import display_stations
     display_stations()
 elif pg.title == "Search":
